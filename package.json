@@ -1,0 +1,24 @@
+{
+  "name": "yandex-colors",
+  "version": "1.0.0",
+  "description": "Yandex colors in a single array, which includes: HEX encoding, English and Russian color names.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurov/colors.git"
+  },
+  "keywords": [
+    "color",
+    "yandex",
+    "hex"
+  ],
+  "author": "Pavel Gurov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gurov/colors/issues"
+  },
+  "homepage": "https://github.com/gurov/colors#readme"
+}

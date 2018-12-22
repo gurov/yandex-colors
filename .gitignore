@@ -1,0 +1,9 @@
+.idea
+node_modules
+*.lock
+dist
+idea
+*.iml
+*.tgz
+npm-debug.log
+package

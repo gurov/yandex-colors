@@ -1,0 +1,8 @@
+favicon.ico
+gen.php
+.idea
+*.iml
+*.tgz
+npm-debug.log
+*lock.json
+yarn.lock
