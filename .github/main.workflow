@@ -1,4 +1,4 @@
-workflow "Build, Test, and Publish" {
+workflow "Filter and Publish" {
   on = "push"
   resolves = ["Publish"]
 }
@@ -12,9 +12,11 @@ action "Filter" {
 action "Publish" {
   needs = "Filter"
   uses = "actions/npm@master"
-  args = "publish --access public"
+  args = "publish"
   env = {
     NPM_REGISTRY_URL = "https://registry.npmjs.org"
   }
-  secrets = ["NPM_TOKEN"]
+  secrets = [
+    "NPM_AUTH_TOKEN",
+  ]
 }
