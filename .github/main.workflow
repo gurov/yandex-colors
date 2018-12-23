@@ -1,9 +1,17 @@
-workflow "New workflow" {
+workflow "Build, Test, and Publish" {
   on = "push"
-  resolves = ["GitHub Action for npm"]
+  resolves = ["Publish"]
 }
 
-action "GitHub Action for npm" {
-  uses = "actions/npm@e7aaefe"
-  runs = "npm version minor & npm publish"
+# Filter for master branches
+action "Filter" {
+  uses = "actions/bin/filter@master"
+  args = "branch master"
+}
+
+action "Publish" {
+  needs = "Filter"
+  uses = "actions/npm@master"
+  args = "publish --access public"
+  secrets = ["NPM_TOKEN"]
 }
