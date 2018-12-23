@@ -13,5 +13,8 @@ action "Publish" {
   needs = "Filter"
   uses = "actions/npm@master"
   args = "publish --access public"
+  env = {
+    NPM_REGISTRY_URL = "https://registry.npmjs.org"
+  }
   secrets = ["NPM_TOKEN"]
 }
